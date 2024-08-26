@@ -142,9 +142,7 @@ function App() {
 
                       <tr>
                         <td style={{ color: "#ff4732" }}>Date de départ</td>
-                        <td>
-                          : {moment(item.Départ, "DD/MM/YYYY").format("LL")}
-                        </td>
+                        <td>: {item.Départ}</td>
                       </tr>
 
                       <tr>
