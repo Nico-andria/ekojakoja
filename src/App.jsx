@@ -110,7 +110,13 @@ function App() {
                 value={inputValue}
                 onChange={handleInputChange}
               />
-              <button type="submit">Rechercher</button>
+              {loading ? (
+                <button type="button" disabled>
+                  Chargement...
+                </button>
+              ) : (
+                <button type="submit">Rechercher</button>
+              )}
             </form>
           </div>
 
@@ -136,7 +142,7 @@ function App() {
                   {data.map((item) => (
                     <>
                       <tr>
-                        <td style={{ color: "#ff4732" }}>Référence</td>
+                        <td style={{ color: "#ff4732" }}>Tracking Number</td>
                         <td>: {item.Tracking}</td>
                       </tr>
 
@@ -210,6 +216,7 @@ function App() {
                         className={`progress one ${
                           item.Statut == "ENTREPOT CHINE" ||
                           item.Statut == "EN TRANSIT" ||
+                          item.Statut == "EN DOUANE" ||
                           item.Statut == "ARRIVEE A MDG"
                             ? "active"
                             : ""
@@ -230,6 +237,7 @@ function App() {
                       <div
                         className={`progress two ${
                           (item.Statut == "EN TRANSIT" ||
+                            item.Statut == "EN DOUANE" ||
                             item.Statut == "ARRIVEE A MDG") &&
                           "active"
                         }`}
@@ -239,6 +247,33 @@ function App() {
                       </div>
                       <p className="text">En transit</p>
                     </li>
+
+                    {/* en douane au port MDG */}
+                    {item.Envoi === "Maritime" ? (
+                      <li>
+                        <i
+                          className={`icon ${
+                            item.Envoi == "Maritime"
+                              ? "uil-store-alt"
+                              : "uil-plane"
+                          }`}
+                        ></i>
+                        <div
+                          className={`progress three ${
+                            (item.Statut == "EN DOUANE" ||
+                              item.Statut == "ARRIVEE A MDG") &&
+                            "active"
+                          }`}
+                        >
+                          <p>{item.Envoi === "Maritime" ? "3" : "2"}</p>
+                          <i className="uil uil-check"></i>
+                        </div>
+                        <p className="text">En Douane MDG</p>
+                      </li>
+                    ) : (
+                      ""
+                    )}
+
                     <li>
                       <i
                         className="icon uil uil-map-marker"
@@ -249,11 +284,11 @@ function App() {
                         }}
                       ></i>
                       <div
-                        className={`progress three ${
-                          item.Statut == "ARRIVEE A MDG" && "active"
-                        }`}
+                        className={`progress ${
+                          item.Envoi == "Maritime" && "four"
+                        } three ${item.Statut == "ARRIVEE A MDG" && "active"}`}
                       >
-                        <p>3</p>
+                        <p>{item.Envoi === "Maritime" ? "4" : "3"}</p>
                         <i className="uil uil-check"></i>
                       </div>
                       <p
