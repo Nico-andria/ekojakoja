@@ -3,4 +3,30 @@
  
 } */
 
+:root {
+  --primary-color: #182f3c;
+  --secondary-color: #ed6d07;
+  --blue: #1d95dd;
+  --linear: linear-gradient(#e84758, #ed6d07, #ffdd4a);
+  --red: #e84758;
+  --green: #21a179;
+  --contour: #b7bfc3;
+  --label-clair: #64747c;
+  --text-color: #182f3c;
+  /* Définition des valeurs par défaut pour les tailles et polices */
+  --text-size-small: 16px;
+  --text-size-medium: 20px;
+  --text-size-large: 32px;
 
+  --font-family-primary: "Arial", sans-serif;
+  --font-weight-regular: 400;
+  --font-weight-bold: 600;
+
+  --button-disable: #b7bfc3;
+  --button: #182f3c;
+  --button-loading: #21a179;
+  --facebook: #1d95dd;
+
+  --width_large: 595px;
+  --width_small: 326px;
+}

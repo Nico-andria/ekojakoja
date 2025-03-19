@@ -1,0 +1,78 @@
+.contentWrapper {
+  position: relative;
+  border-radius: 40px;
+  border: 1px solid var(--contour);
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 48px 32px 48px 32px;
+
+  width: 594px;
+}
+
+.logoSection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.logo {
+  width: 302px;
+  height: 47px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.slogan {
+  margin-top: 8px;
+  color: #000;
+  font: 500 20px SFT Schrifted Sans TRIAL, -apple-system, Roboto, Helvetica,
+    sans-serif;
+}
+
+.eKojaKojaLink {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 50px;
+}
+
+.linkIcon {
+  width: 28px;
+  height: 28px;
+}
+
+.link {
+  color: var(--facebook);
+  text-decoration: underline;
+  font: 600 17px SFT Schrifted Sans TRIAL, -apple-system, Roboto, Helvetica,
+    sans-serif;
+}
+
+@media (max-width: 991px) {
+  .trackingModule {
+    padding: 0 20px;
+  }
+
+  .backgroundWrapper {
+    padding: 100px 20px;
+  }
+
+  .contentWrapper {
+    padding: 0 20px;
+  }
+
+  .eKojaKojaLink {
+    margin-top: 40px;
+  }
+}
+
+/* mobile */
+@media (max-width: 767px) {
+  .contentWrapper {
+    width: 326px; /* Largeur pour mobile */
+    padding: 48px 32px 48px 32px;
+    margin: 0 auto; /* Centrer la div */
+  }
+}

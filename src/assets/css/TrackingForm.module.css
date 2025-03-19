@@ -1,0 +1,62 @@
+.trackingForm {
+  display: flex;
+  flex-direction: column;
+  padding-top: 48px;
+}
+
+.formHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 24px;
+}
+
+.trackingIcon {
+  width: 36px;
+  height: 36px;
+}
+
+.formTitle {
+  color: #000;
+  font-size: var(--text-size-large);
+  font-weight: 600;
+}
+
+.radioGroup {
+  padding-bottom: 28px;
+}
+
+.radioGroupLabel {
+  color: #000;
+  font-size: var(--text-size-small);
+  font-weight: 600;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+.radioOptions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* Style pour mobile (vertical) */
+@media (max-width: 767px) {
+  .radioOptions {
+    flex-direction: column; /* Alignement vertical */
+    gap: 8px; /* Espacement réduit pour mobile */
+  }
+}
+.inputText {
+  padding-bottom: 16px;
+}
+.errorMessage {
+  color: red;
+  padding-top: 8px;
+}
+
+@media (max-width: 991px) {
+  .trackingForm {
+    /*margin-top: 40px;*/
+  }
+}
