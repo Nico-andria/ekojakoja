@@ -2,7 +2,6 @@
   position: relative;
   border-radius: 40px;
   border: 1px solid var(--contour);
-  background-color: #ffffff;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -69,9 +68,9 @@
 }
 
 /* mobile */
-@media (max-width: 767px) {
+@media (max-width: 120px) {
   .contentWrapper {
-    width: 326px; /* Largeur pour mobile */
+    width: 326px;
     padding: 48px 32px 48px 32px;
     margin: 0 auto; /* Centrer la div */
   }

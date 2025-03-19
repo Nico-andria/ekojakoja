@@ -67,6 +67,9 @@
     sans-serif;
 }
 @media (max-width: 767px) {
+  .main {
+    height: 100%;
+  }
   .container {
     width: 326px; /* Largeur pour mobile */
     padding: 48px 32px 48px 32px;
