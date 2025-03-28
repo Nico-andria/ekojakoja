@@ -3,11 +3,13 @@ import "../assets/css/main.css";
 
 import logo from "../assets/images/Logo_Desktop_Tablette.png";
 import TrackingForm from "../components/Main/TrackingForm";
+import TrackingModule from "../components/Main/TrackingModule";
 
 const Main = () => {
   return (
     <div className="main">
-      <div className="container">
+      <TrackingModule />
+      {/* <div className="container">
         <div className="logoSection">
           <img src={logo} alt="" className="logo" />
           <p className="slogan">
@@ -26,7 +28,7 @@ const Main = () => {
             E-KojaKoja
           </a>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

@@ -6,7 +6,7 @@
   flex-direction: column;
   overflow: hidden;
   padding: 48px 32px 48px 32px;
-
+  background-color: #fff;
   width: 594px;
 }
 
@@ -49,16 +49,9 @@
     sans-serif;
 }
 
-@media (max-width: 991px) {
-  .trackingModule {
-    padding: 0 20px;
-  }
-
-  .backgroundWrapper {
-    padding: 100px 20px;
-  }
-
+@media (max-width: 767px) {
   .contentWrapper {
+    width: 326px; /* Largeur pour mobile */
     padding: 48px 32px 48px 32px;
   }
 
@@ -68,7 +61,7 @@
 }
 
 /* mobile */
-@media (max-width: 120px) {
+@media (max-width: 320px) {
   .contentWrapper {
     width: 326px;
     padding: 48px 32px 48px 32px;
