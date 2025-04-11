@@ -139,15 +139,25 @@ const TrackingTimeline = () => {
                     <span className={styles.infoLabel}>Type d'envoi</span>
                     <span className={styles.infoValue}>{item.Envoi}</span>
                   </div>
-                  <div className={styles.infoItem}>
-                    <span className={styles.infoLabel}>
-                      Nombres de colis pour ce numéro
-                    </span>
-                    <span className={styles.infoValue}>10</span>
-                  </div>
+                  {item.Commentaires && (
+                    <div className={styles.infoItem}>
+                      <span className={styles.infoLabel}>
+                        Infos sur ce colis
+                      </span>
+                      <span className={styles.infoValue}>
+                        {item.Commentaires}
+                      </span>
+                    </div>
+                  )}
+
                   <div className={styles.infoItem}>
                     <span className={styles.infoLabel}>Tarif</span>
-                    <span className={styles.infoValue}>{item.Tarif} $ /m3</span>
+                    <span className={styles.infoValue}>
+                      {Number(item.Tarif).toLocaleString("fr-FR")}
+                      {!item.Envoi?.includes("Maritime")
+                        ? "Ariary / kg"
+                        : "$ / m3"}
+                    </span>
                   </div>
                   <div className={styles.infoRow}>
                     <div className={styles.infoItem}>

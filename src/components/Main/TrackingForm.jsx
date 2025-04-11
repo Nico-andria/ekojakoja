@@ -103,7 +103,7 @@ const TrackingForm = () => {
       <div className="inputText">
         <InputField
           label="Renseignez le numéro ici"
-          placeholder="Ex : 78778556280555600 ou EKA"
+          placeholder="Ex : 78778556280555600 ou E101"
           className="inputText"
           value={inputValue} // Liez la valeur
           //   onChange={(e) => setInputValue(e.target.value)}

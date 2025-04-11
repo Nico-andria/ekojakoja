@@ -107,9 +107,9 @@ const TrackingTimeline = () => {
                 </div>
                 <div className={styles.infoItem}>
                   <span className={styles.infoLabel}>
-                    Nombres de colis pour ce numéro
+                    Information sur le colis
                   </span>
-                  <span className={styles.infoValue}>10</span>
+                  <span className={styles.infoValue}>{item.Commentaires}</span>
                 </div>
                 <div className={styles.infoItem}>
                   <span className={styles.infoLabel}>Tarif</span>
