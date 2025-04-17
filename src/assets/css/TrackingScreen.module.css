@@ -438,11 +438,17 @@
 /* mobile */
 @media (max-width: 767px) {
   .timelineSection {
-    width: 326px; /* Largeur pour mobile */
+    width: 326px;
+  }
+  .timelineDetails {
+    padding: 0;
   }
   .orderDetails {
     width: 326px; /* Largeur pour mobile */
     padding: 48px 32px 48px 32px;
     margin-top: 16;
+  }
+  .timeline {
+    width: 100%;
   }
 }
