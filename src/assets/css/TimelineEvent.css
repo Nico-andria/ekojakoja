@@ -42,8 +42,7 @@ ul li .progress {
   right: 30px;
 }
 .one::after {
-  width: 0;
-  height: 0;
+  display: none;
 }
 ul li .progress .uil {
   display: none;
@@ -59,8 +58,8 @@ ul li .active {
   display: grid;
   place-items: center;
 }
-li .active::after {
-  background-color: var(--green);
+.progress.active::after {
+  background-color: #4caf50;
 }
 ul li .active p {
   display: none;
@@ -72,6 +71,9 @@ ul li .active .uil {
 /* Couleur pour le dernier élément actif */
 ul li:nth-last-of-type(1) .active {
   background-color: #4caf50; /* Couleur du dernier élément actif */
+}
+.text {
+  font-family: "Poppins", sans-serif;
 }
 
 /* Responsive Css  */
@@ -140,15 +142,14 @@ ul li:nth-last-of-type(1) .active {
   }
 }
 
-.info,
+/* .info,
 .progression {
   display: flex;
-  /* justify-content: center;
-  align-items: left; */
-}
-.progression {
-  margin-top: -60px;
-}
+
+  justify-content: center;
+  align-items: left;
+} */
+
 .error,
 .commentaire {
   color: #dc3545;
@@ -156,4 +157,7 @@ ul li:nth-last-of-type(1) .active {
   padding: 10px;
   border-radius: 5px;
   margin-top: 20px;
+}
+.progression ul li {
+  padding: 10px;
 }

@@ -20,6 +20,7 @@
   color: #000;
   font-size: var(--text-size-large);
   font-weight: 600;
+  font-family: "Poppins", sans-serif;
 }
 
 .radioGroup {
@@ -32,6 +33,7 @@
   font-weight: 600;
   margin-bottom: 8px;
   text-align: left;
+  font-family: "Poppins", sans-serif;
 }
 
 .radioOptions {
@@ -50,7 +52,12 @@
 .inputText {
   padding-bottom: 16px;
 }
+.inputText::placeholder {
+  color: #64747c;
+  font-family: "Poppins", sans-serif;
+}
 .errorMessage {
+  font-family: "Poppins", sans-serif;
   color: red;
   padding-top: 8px;
 }

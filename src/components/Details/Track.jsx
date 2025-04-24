@@ -2,48 +2,37 @@ import React, { useState } from "react";
 import styles from "../../assets/css/TrackingScreen.module.css";
 import { useLocation } from "react-router-dom";
 import "../../assets/css/TimelineEvent.css";
-// import "../../assets/css/VerticalProgress.css";
-
 import suivi from "../../assets/Icones/Icon_Clipboard_Desktop_Tablette.png";
 import search from "../../assets/Icones/Icon_Search_Desk_Mobil.png";
-
 import { DateTime } from "luxon";
 import VerticalProgress from "./VerticalProgress";
-import Faq from "./Faq";
+import up from "../../assets/Icones/Icon_up.png";
+import down from "../../assets/Icones/Icon_down.png";
 
-const TrackingTimeline = () => {
+const Track = () => {
   const location = useLocation();
   const { data } = location.state || {};
 
-  // État pour stocker le TrackingNumber sélectionné
-  const [selectedTrackingNumber, setSelectedTrackingNumber] = useState(null);
+  const [searchItem, setSearchItem] = useState("");
+  const [activeTracking, setActiveTracking] = useState(null);
 
-  // Fonction pour gérer la sélection d'un TrackingNumber
-  const handleTrackingNumberClick = (trackingNumber) => {
-    setSelectedTrackingNumber(
-      selectedTrackingNumber === trackingNumber ? null : trackingNumber
+  const handleSearchTerm = (e) => {
+    setSearchItem(e.target.value);
+  };
+
+  const toggleAccordion = (trackingNumber) => {
+    setActiveTracking(
+      activeTracking === trackingNumber ? null : trackingNumber
     );
   };
 
-  // Filtrer les données pour ne garder que celles correspondant au TrackingNumber sélectionné
-  const filteredData = selectedTrackingNumber
-    ? data.filter((item) => item.Tracking === selectedTrackingNumber)
-    : [];
-
-  // Extrayez les valeurs nécessaires (pseudo, nombreColis, etc.)
+  // Extrayez les valeurs nécessaires
   const pseudo = data[0]?.Pseudo || "Non disponible";
   const nombreColis = data.length || "Non disponible";
 
-  const [searchItem, setSearchItem] = useState("");
-
-  const handleSearchTerm = (e) => {
-    let value = e.target.value;
-    setSearchItem(value);
-  };
-
   return (
     <div className={styles.trackingTimeline}>
-      {/* OrderDetails */}
+      {/* OrderDetails - Maintenu identique */}
       {data.length > 2 && (
         <div className={styles.orderDetails}>
           <div className={styles.orderHeader}>
@@ -79,33 +68,32 @@ const TrackingTimeline = () => {
         </div>
       )}
 
-      <Faq />
-
-      {/* Afficher la liste des TrackingNumbers */}
-      {data
-        .filter((item) => {
-          return item.Tracking.includes(searchItem);
-        })
-        .map((item, index) => (
-          <div key={index} className={styles.timelineSection}>
+      {/* Nouveau système d'accordéon unifié */}
+      <div className={styles.timelineSection}>
+        {data
+          .filter((item) => item.Tracking.includes(searchItem))
+          .map((item, index) => (
             <div
-              className={styles.timelineHeader}
-              onClick={() => handleTrackingNumberClick(item.Tracking)}
+              key={index}
+              className={`${styles.accordionItem} ${
+                activeTracking === item.Tracking ? styles.active : ""
+              }`}
             >
-              <div className={styles.trackingNumber}>
-                {item.Tracking}{" "}
-                {/* <span className={styles.colisCount}>{item.colisCount}</span> */}
-              </div>
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets/6fd89aac11cf475281a5c0287ada72e5/3c221fef249067cefbf0d5bed4cf2028c63171fb7d2c5fb5e4e745c21410ec3a?apiKey=6fd89aac11cf475281a5c0287ada72e5&"
-                alt=""
-                className={styles.expandIcon}
-              />
-            </div>
+              <button
+                className={styles.accordionHeader}
+                onClick={() => toggleAccordion(item.Tracking)}
+              >
+                <div className={styles.trackingNumber}>{item.Tracking}</div>
+                <img
+                  src={activeTracking === item.Tracking ? up : down}
+                  alt={
+                    activeTracking === item.Tracking ? "Réduire" : "Développer"
+                  }
+                  className={styles.accordionIcon}
+                />
+              </button>
 
-            {/* Afficher les détails uniquement pour le TrackingNumber sélectionné */}
-            {selectedTrackingNumber === item.Tracking && (
-              <div className={styles.timelineDetails}>
+              <div className={styles.accordionContent}>
                 <div className={styles.shipmentInfo}>
                   <div className={styles.infoItem}>
                     <span className={styles.infoLabel}>
@@ -113,7 +101,7 @@ const TrackingTimeline = () => {
                     </span>
                     <span className={styles.infoValue}>
                       {DateTime.fromFormat(item.Réception, "dd/MM/yyyy")
-                        .setLocale("fr") // Définir la localisation en français
+                        .setLocale("fr")
                         .toFormat("cccc d MMMM yyyy")}
                     </span>
                   </div>
@@ -129,7 +117,7 @@ const TrackingTimeline = () => {
                       {item.Départ === "EN ATTENTE"
                         ? "En attente"
                         : DateTime.fromFormat(item.Départ, "dd/MM/yyyy")
-                            .setLocale("fr") // Définir la localisation en français
+                            .setLocale("fr")
                             .toFormat("cccc d MMMM yyyy")}
                     </span>
                   </div>
@@ -166,18 +154,19 @@ const TrackingTimeline = () => {
                     </div>
                     <div className={styles.infoItem}>
                       <span className={styles.infoLabel}>Poids</span>
-                      <span className={styles.infoValue}>{item?.Poids} kg</span>
+                      <span className={styles.infoValue}>
+                        {item?.Poids ? `${item.Poids}kg` : "-"}
+                      </span>
                     </div>
                   </div>
                 </div>
-
-                <VerticalProgress items={filteredData} />
+                <VerticalProgress items={[item]} />
               </div>
-            )}
-          </div>
-        ))}
+            </div>
+          ))}
+      </div>
     </div>
   );
 };
 
-export default TrackingTimeline;
+export default Track;

@@ -5,6 +5,7 @@ import TrackingModule from "../components/Main/TrackingModule";
 import TrackingTimeline from "../components/Details/TrackingTimeline";
 import "../assets/css/details.css";
 import TrackingTimelinee from "../components/Details/TrackingTimelinee";
+import Track from "../components/Details/Track";
 const Details = () => {
   return (
     <>
@@ -13,7 +14,8 @@ const Details = () => {
         {/* <OrderDetails /> */}
         {/* <TrackingItem /> */}
         {/* <TrackingTimeline /> */}
-        <TrackingTimelinee />
+        {/* <TrackingTimelinee /> */}
+        <Track />
       </div>
     </>
   );

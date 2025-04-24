@@ -1,0 +1,63 @@
+.timeline {
+  width: 100%;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background: var(--primary-color);
+  border-radius: 0 0 24px 24px;
+}
+
+.progression ul {
+  list-style: none;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.progression li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.progress {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: var(--label-clair);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  margin-right: 15px;
+  position: relative;
+  font-size: 14px;
+}
+
+.progress.active {
+  background-color: var(--green);
+}
+
+.text {
+  margin: 0;
+  padding-top: 5px;
+  color: #fff; /* Couleur constante */
+  font-weight: demi-bold;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+}
+
+.connector {
+  height: 50px;
+  width: 2px;
+  background-color: #e0e0e0;
+  margin-left: 14px;
+  position: absolute;
+  top: 30px;
+  z-index: 0;
+}
+
+.connector.active {
+  background-color: var(--green);
+}
