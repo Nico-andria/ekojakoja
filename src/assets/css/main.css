@@ -14,7 +14,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: pop;
+  font-family: "Poppins", sans-serif;
   flex-direction: column;
 
   background-image: url("../images/background_image_1.png");

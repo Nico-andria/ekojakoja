@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import styles from "../../assets/css/TrackingForm.module.css";
 import RadioButton from "./RadioButton";
 import InputField from "./InputField";
@@ -6,8 +6,6 @@ import Button from "./Button";
 import icone from "../../assets/Icones/Icon_Box_Desktop_Tablette.png";
 
 import { useNavigate } from "react-router-dom";
-
-import Loading from "../Loading";
 
 const TrackingForm = () => {
   const [trackingType, setTrackingType] = useState("Pseudo");

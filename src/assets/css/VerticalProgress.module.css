@@ -16,7 +16,8 @@
 .progression li {
   display: flex;
   align-items: flex-start;
-  margin-bottom: 50px;
+  margin-top: 25px;
+  margin-bottom: 25px;
   position: relative;
 }
 
@@ -43,7 +44,7 @@
   margin: 0;
   padding-top: 5px;
   color: #fff; /* Couleur constante */
-  font-weight: demi-bold;
+  font-weight: 600;
   font-size: 16px;
   font-family: "Poppins", sans-serif;
 }
