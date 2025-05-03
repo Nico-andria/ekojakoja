@@ -92,26 +92,6 @@
     sans-serif;
 }
 
-@media (max-width: 767px) {
-  .contentWrapper {
-    width: 326px; /* Largeur pour mobile */
-    padding: 48px 32px 48px 32px;
-  }
-
-  .eKojaKojaLink {
-    margin-top: 40px;
-  }
-}
-
-/* mobile */
-@media (max-width: 320px) {
-  .contentWrapper {
-    width: 326px;
-    padding: 48px 32px 48px 32px;
-    margin: 0 auto; /* Centrer la div */
-  }
-}
-
 .logoSection {
   display: flex;
   flex-direction: column;
@@ -167,6 +147,9 @@
 
   .eKojaKojaLink {
     margin-top: 40px;
+  }
+  .slogan {
+    font-size: 14px;
   }
 }
 

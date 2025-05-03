@@ -63,9 +63,12 @@
   padding-top: 8px;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 767px) {
   .trackingForm {
     /*margin-top: 40px;*/
+  }
+  .formTitle {
+    font-size: 24px;
   }
 }
 
