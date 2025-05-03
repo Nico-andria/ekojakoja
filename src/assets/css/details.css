@@ -5,6 +5,7 @@
   align-items: center;
   font-family: pop;
   flex-direction: column;
-  padding-top: 48px;
+  /* padding-top: 48px; */
   padding-bottom: 48px;
+  background-color: #f6f7f7;
 }

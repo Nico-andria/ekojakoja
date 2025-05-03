@@ -1,11 +1,3 @@
-.trackingScreen {
-  background-color: #f6f7f7;
-  display: flex;
-  padding-bottom: 149px;
-  flex-direction: column;
-  overflow: hidden;
-}
-
 .contentWrapper {
   justify-content: center;
   /*align-items: center;*/
@@ -156,11 +148,15 @@
   border: none;
   cursor: pointer;
 }
-
-.searchIcon {
+.searchIconDiv {
+  padding-top: 3px;
   width: 24px;
   height: 24px;
   padding-right: 8px;
+}
+.searchIcon {
+  width: 18px;
+  height: 18px;
 }
 
 .eKojaKojaLink {
@@ -194,7 +190,7 @@
   background-color: #fff;
   padding: 16px 24px;
   margin-top: 48px;
-  margin-left: 32px;
+  /* margin-left: 32px; */
   width: 594px;
 }
 
@@ -281,8 +277,15 @@
 }
 
 .trackingTimeline {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin-top: 16px;
+  background-color: #f6f7f7;
+  width: 100%;
 }
+
 .timelineSection {
   border-radius: 24px !important;
   margin: 28px;
@@ -454,106 +457,6 @@
   }
 }
 
-/* accordion */
-/* Styles pour l'accordéon de suivi */
-/* .tracking-accordion-container {
-  margin-top: 20px;
-  width: 100%;
-}
-
-.tracking-accordion-item {
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  margin-bottom: 10px;
-  overflow: hidden;
-  background-color: #fff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-}
-
-.tracking-accordion-item.active {
-  border-color: #4a90e2;
-}
-
-.tracking-accordion-header {
-  width: 100%;
-  padding: 15px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #f8f9fa;
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
-  text-align: left;
-  transition: background-color 0.2s;
-}
-
-.tracking-accordion-header:hover {
-  background-color: #e9ecef;
-}
-
-.tracking-accordion-item.active .tracking-accordion-header {
-  background-color: #e7f1ff;
-  font-weight: 600;
-}
-
-.tracking-accordion-number {
-  font-weight: 500;
-  color: #333;
-}
-
-.tracking-accordion-icon {
-  font-size: 18px;
-  font-weight: bold;
-  color: #6c757d;
-}
-
-.tracking-accordion-content {
-  padding: 0;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease, padding 0.3s ease;
-}
-
-.tracking-accordion-item.active .tracking-accordion-content {
-  padding: 15px 20px;
-  max-height: 1500px;
-}
-
-.tracking-accordion-details {
-  padding: 10px 0;
-}
-
-.info-item {
-  margin-bottom: 12px;
-}
-
-.info-label {
-  display: block;
-  font-size: 14px;
-  color: #6c757d;
-  margin-bottom: 4px;
-}
-
-.info-value {
-  display: block;
-  font-size: 15px;
-  color: #212529;
-}
-
-.info-row {
-  display: flex;
-  gap: 20px;
-  margin-top: 15px;
-}
-
-.warning {
-  color: #dc3545;
-  font-weight: 500;
-} */
-
-/* Ajoutez ces styles à votre fichier TrackingScreen.module.css */
-
 .accordionContainer {
   /* margin: 20px 0; */
   width: 100%;
@@ -568,9 +471,9 @@
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
-/* .accordionItem.active {
-  border-color: #4a90e2;
-} */
+.accordionItem.active {
+  border-color: var(--primary-color);
+}
 
 .accordionHeader {
   width: 100%;
@@ -585,9 +488,14 @@
   text-align: left;
   transition: background-color 0.2s;
 }
+.accordionItem.active .accordionHeader:hover {
+  border: none;
+}
 
 .accordionHeader:hover {
-  background-color: #e9ecef;
+  border: 1px solid var(--primary-color);
+  border-radius: 24px;
+  /* background-color: #e9ecef; */
 }
 
 .accordionItem.active .accordionHeader {
@@ -622,17 +530,15 @@
 }
 
 .accordionIcon {
-  width: 24px; /* Ajustez selon la taille de vos icônes */
+  width: 24px;
   height: 24px;
-  transition: transform 0.3s ease; /* Animation fluide */
+  transition: transform 0.3s ease;
 }
 
 .accordionItem.active .accordionIcon {
-  transform: rotate(0deg); /* Pour l'icône up */
+  transform: rotate(0deg);
 }
 
 .accordionIcon:not(.active) {
-  transform: rotate(0deg); /* Pour l'icône down */
+  transform: rotate(0deg);
 }
-
-/* Conservez vos styles existants pour shipmentInfo, infoItem, etc. */

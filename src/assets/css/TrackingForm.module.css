@@ -51,6 +51,7 @@
 }
 .inputText {
   padding-bottom: 16px;
+  color: var(--primary-color);
 }
 .inputText::placeholder {
   color: #64747c;
@@ -65,5 +66,11 @@
 @media (max-width: 991px) {
   .trackingForm {
     /*margin-top: 40px;*/
+  }
+}
+
+@media (max-width: 320px) {
+  .formTitle {
+    font-size: 24px;
   }
 }

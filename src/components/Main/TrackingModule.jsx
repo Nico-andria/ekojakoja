@@ -1,14 +1,17 @@
 import React from "react";
 import "../../assets/css/TrackingModule.css";
 import logo from "../../assets/images/Logo_Desktop_Tablette.png";
+import logoMobile from "../../assets/images/Logo_Mobile.png";
 import TrackingForm from "./TrackingForm";
 
-const TrackingModule = () => {
+const TrackingModule = ({ isInDetails = false }) => {
   return (
-    <div className="trackingModule">
+    <div className={`trackingModule ${isInDetails ? "inDetails" : ""}`}>
       <div className="contentWrapper">
         <div className="logoSection">
-          <img src={logo} alt="" className="logo" />
+          <img src={logo} alt="" className="logo desktop" />
+          <img src={logoMobile} alt="" className="logo mobile" />
+
           <p className="slogan">
             Votre partenaire de confiance pour l'importation
           </p>

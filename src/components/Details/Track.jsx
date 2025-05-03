@@ -55,7 +55,9 @@ const Track = () => {
               Recherchez dans votre commande
             </label>
             <div className={styles.searchInputWrapper}>
-              <img src={search} alt="" className={styles.searchIcon} />
+              <div className={styles.searchIconDiv}>
+                <img src={search} alt="" className={styles.searchIcon} />
+              </div>
               <input
                 type="text"
                 id="orderSearch"

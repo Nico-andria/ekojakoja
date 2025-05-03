@@ -1,4 +1,4 @@
-.contentWrapper {
+/* .trackingModule {
   position: relative;
   border-radius: 40px;
   border: 1px solid var(--contour);
@@ -8,6 +8,33 @@
   padding: 48px 32px 48px 32px;
   background-color: #fff;
   width: 594px;
+} */
+
+.contentWrapper {
+  position: relative;
+  border-radius: 40px;
+  border: 1px solid var(--contour);
+  background: red;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 48px 32px 48px 32px;
+  background-color: #fff;
+  width: 594px;
+}
+.trackingModule.inDetails {
+  width: 100%;
+  background-color: #fff !important;
+  border: 1px solid var(--contour);
+  border-radius: 40px;
+}
+.trackingModule.inDetails .contentWrapper {
+  padding-top: -48px;
+  border: none;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .logoSection {
@@ -21,6 +48,23 @@
   height: 47px;
   max-width: 100%;
   object-fit: contain;
+}
+.logo.mobile {
+  display: none;
+}
+
+.logo.desktop {
+  display: block;
+}
+
+@media (max-width: 326px) {
+  .logo.mobile {
+    display: block;
+  }
+
+  .logo.desktop {
+    display: none;
+  }
 }
 
 .slogan {
@@ -65,5 +109,82 @@
     width: 326px;
     padding: 48px 32px 48px 32px;
     margin: 0 auto; /* Centrer la div */
+  }
+}
+
+.logoSection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.logo {
+  width: 302px;
+  height: 47px;
+  max-width: 100%;
+  object-fit: contain;
+}
+.logo.mobile {
+  display: none;
+}
+
+.logo.desktop {
+  display: block;
+}
+
+.slogan {
+  margin-top: 8px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #64747c;
+  font-family: "Poppins", sans-serif;
+}
+
+.eKojaKojaLink {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 50px;
+}
+
+.linkIcon {
+  width: 28px;
+  height: 28px;
+}
+
+.link {
+  color: var(--facebook);
+  text-decoration: underline;
+  font: 600 17px SFT Schrifted Sans TRIAL, -apple-system, Roboto, Helvetica,
+    sans-serif;
+}
+
+@media (max-width: 767px) {
+  .contentWrapper {
+    width: 326px; /* Largeur pour mobile */
+    padding: 48px 32px 48px 32px;
+  }
+
+  .eKojaKojaLink {
+    margin-top: 40px;
+  }
+}
+
+/* mobile */
+@media (max-width: 320px) {
+  .contentWrapper {
+    width: 326px;
+    padding: 48px 32px 48px 32px;
+    margin: 0 auto; /* Centrer la div */
+  }
+  .logo.mobile {
+    display: block;
+  }
+
+  .logo.desktop {
+    display: none;
+  }
+  .slogan {
+    font-size: 14px;
   }
 }
