@@ -21,7 +21,7 @@
 }
 
 .radioLabel {
-  color: #000;
+  color: var(--primary-color);
   font: 500 16px "Poppins", sans-serif;
   cursor: pointer;
   text-align: left;

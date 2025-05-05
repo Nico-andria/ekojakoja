@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "../../assets/css/VerticalProgress.module.css";
+import check from "../../assets/Icones/check.png";
 
 const VerticalProgress = ({ items }) => {
   const steps = [
@@ -74,7 +75,12 @@ const VerticalProgress = ({ items }) => {
                         isActive ? styles.active : ""
                       }`}
                     >
-                      {isActive ? "✓" : step.displayId}
+                      {isActive ? (
+                        <img src={check} width={20} />
+                      ) : (
+                        step.displayId
+                      )}
+                      {/* {isActive ? "✓" : step.displayId} */}
                     </div>
                     <p className={styles.text}>{step.title}</p>
                     {!isLast && (

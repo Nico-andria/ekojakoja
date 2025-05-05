@@ -34,7 +34,7 @@
 
 .slogan {
   margin-top: 8px;
-  color: #000;
+  color: var(--primary-color);
   font: 500 20px SFT Schrifted Sans TRIAL, -apple-system, Roboto, Helvetica,
     sans-serif;
 }
@@ -55,7 +55,7 @@
 }
 
 .trackingHeading {
-  color: #000;
+  color: var(--primary-color);
   font: 600 32px SFT Schrifted Sans TRIAL, -apple-system, Roboto, Helvetica,
     sans-serif;
 }
@@ -74,7 +74,7 @@
 }
 
 .radioLegend {
-  color: #000;
+  color: var(--primary-color);
   font: 600 17px SFT Schrifted Sans TRIAL, -apple-system, Roboto, Helvetica,
     sans-serif;
 }
@@ -103,7 +103,7 @@
 }
 
 .radioLabel {
-  color: #000;
+  color: var(--primary-color);
   font: 500 16px SFT Schrifted Sans TRIAL, -apple-system, Roboto, Helvetica,
     sans-serif;
 }
@@ -113,7 +113,7 @@
 }
 
 .inputLabel {
-  color: #000;
+  color: var(--primary-color);
   font: 600 17px SFT Schrifted Sans TRIAL, -apple-system, Roboto, Helvetica,
     sans-serif;
 }
@@ -164,7 +164,7 @@
   /*align-items: center;*/
   text-align: left;
   gap: 8px;
-  color: #000101;
+  color: var(--primary-color) 101;
   text-decoration: underline;
   font: 600 17px SFT Schrifted Sans TRIAL, -apple-system, Roboto, Helvetica,
     sans-serif;
@@ -208,7 +208,7 @@
 .orderTitle {
   font-size: 24px;
   font-weight: 600;
-  color: #000;
+  color: var(--primary-color);
   font-family: "Poppins", sans-serif;
 }
 
@@ -236,7 +236,7 @@
   font-weight: 600;
   font-family: "Poppins", sans-serif;
   margin-top: 6px;
-  color: #000;
+  color: var(--primary-color);
 }
 .infoDepart {
   color: var(--blue);
@@ -247,7 +247,7 @@
 }
 
 .searchLabel {
-  color: #000;
+  color: var(--primary-color);
   font-family: "Poppins", sans-serif;
   font-weight: 600;
 }
@@ -284,6 +284,7 @@
   margin-top: 16px;
   background-color: #f6f7f7;
   width: 100%;
+  height: 100%;
 }
 
 .timelineSection {
@@ -315,7 +316,7 @@
 .trackingNumber {
   font-weight: 600;
   font-family: "Poppins", sans-serif;
-  color: #000;
+  color: var(--primary-color);
 }
 
 .colisCount {
@@ -455,6 +456,10 @@
   .timeline {
     width: 100%;
   }
+  .trackingTimeline {
+    margin-left: 32px;
+    margin-right: 32px;
+  }
 }
 
 .accordionContainer {
@@ -468,12 +473,12 @@
   margin-bottom: 12px;
   overflow: hidden;
   background-color: #fff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); */
 }
 
-.accordionItem.active {
+/* .accordionItem.active {
   border-color: var(--primary-color);
-}
+} */
 
 .accordionHeader {
   width: 100%;
@@ -502,13 +507,14 @@
   /* background-color: #e7f1ff; */
   font-weight: 600;
   border-bottom: 1px solid #e0e0e0;
+  border: none;
 }
 
 .trackingNumber {
   font-weight: 600;
   font-size: 16px;
   font-family: "Poppins", sans-serif;
-  color: #333;
+  color: var(--primary-color);
 }
 
 .accordionIcon {
