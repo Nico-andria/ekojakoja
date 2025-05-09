@@ -453,7 +453,7 @@
   }
   .orderDetails {
     width: 326px; /* Largeur pour mobile */
-    padding: 48px 24px 48px 24px;
+    padding: 16px 24px 16px 24px;
     margin-top: 16;
   }
   .accordionHeader:hover {
@@ -488,10 +488,6 @@
   border: none;
 }
 
-/* .accordionItem.active {
-  border-color: var(--primary-color);
-} */
-
 .accordionHeader {
   width: 100%;
   padding: 16px 20px;
@@ -512,14 +508,12 @@
 .accordionHeader:hover {
   border: 1px solid var(--primary-color);
   border-radius: 24px;
-  /* background-color: #e9ecef; */
 }
 
 .accordionItem.active .accordionHeader {
-  /* background-color: #e7f1ff; */
   font-weight: 600;
-  border-bottom: 1px solid #e0e0e0;
-  border: none;
+  border-radius: 24px 24px 0 0;
+  border-bottom: none;
 }
 
 .trackingNumber {
@@ -536,15 +530,16 @@
 }
 
 .accordionContent {
-  /* padding: 0 20px; */
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease;
 }
 
 .accordionItem.active .accordionContent {
-  /* padding: 0 20px 20px; */
   max-height: 1500px;
+}
+.accordionItem.active:hover {
+  border: 1px solid var(--primary-color);
 }
 
 .accordionIcon {
