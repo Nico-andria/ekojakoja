@@ -261,6 +261,7 @@
   background-color: #fff;
   margin-top: 4px;
   padding: 12px 16px;
+  font-family: "Poppins", sans-serif;
 }
 
 .orderSearchInput {
@@ -271,6 +272,7 @@
   color: #010101;
   background: #ffffff;
   cursor: text;
+  font-family: "Poppins", sans-serif;
 }
 .orderSearchInput::placeholder {
   font-family: "Poppins", sans-serif;
