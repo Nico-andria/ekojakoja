@@ -151,11 +151,10 @@ const Track = () => {
                     <div className={styles.infoItem}>
                       <span className={styles.infoLabel}>Tarif</span>
                       <span className={styles.infoValue}>
-                        {/* {Number(item.Tarif).toLocaleString("fr-FR")}
+                        {Number(item.Tarif).toLocaleString("fr-FR")}
                         {!item.Envoi?.includes("Maritime")
                           ? "Ar / kg"
-                          : "$ / m³"} */}
-                        {item.Tarif}
+                          : "$ / m³"}
                       </span>
                     </div>
                     <div className={styles.infoItem}>
