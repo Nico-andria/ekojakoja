@@ -35,7 +35,7 @@ const TrackingForm = () => {
     e.preventDefault();
 
     try {
-      const url = `https://sheetdb.io/api/v1/qms48o92dvn20/search?${paramType}=${encodeURIComponent(
+      const url = `https://sheetdb.io/api/v1/z7nk370ysakmz/search?${paramType}=${encodeURIComponent(
         inputValue
       )}`;
 
