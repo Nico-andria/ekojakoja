@@ -45,8 +45,13 @@ const TrackingScreen = () => {
   const fetchData = (event) => {
     event.preventDefault(); // Empêche le comportement par défaut du formulaire
 
-    // Construire l'URL en fonction du type de paramètre sélectionné
-    const url = `https://sheetdb.io/api/v1/qms48o92dvn20/search?${paramType}=${encodeURIComponent(
+    // Construire l'URL en fonction du type de paramètre sélectionné (DEV)
+    // const url = `https://sheetdb.io/api/v1/qms48o92dvn20/search?${paramType}=${encodeURIComponent(
+    //   inputValue
+    // )}`;
+
+    // Construire l'URL en fonction du type de paramètre sélectionné (PROD)
+    const url = `https://sheetdb.io/api/v1/z7nk370ysakmz/search?${paramType}=${encodeURIComponent(
       inputValue
     )}`;
 
