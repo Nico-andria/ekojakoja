@@ -1,0 +1,9 @@
+.mainDetails {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: pop;
+  flex-direction: column;
+  padding-bottom: 48px;
+}

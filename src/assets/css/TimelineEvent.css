@@ -1,0 +1,163 @@
+ul {
+  display: flex;
+  margin-top: 80px;
+}
+ul li {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+ul li .icon {
+  font-size: 35px;
+  color: var(--green);
+  margin: 0 60px;
+}
+ul li .text {
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+}
+
+/* Progress Div Css  */
+
+ul li .progress {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(68, 68, 68, 0.781);
+  margin: 14px 0;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  position: relative;
+  cursor: pointer;
+}
+.progress::after {
+  content: " ";
+  position: absolute;
+  width: 125px;
+  height: 5px;
+  background-color: rgba(68, 68, 68, 0.781);
+  right: 30px;
+}
+.one::after {
+  display: none;
+}
+ul li .progress .uil {
+  display: none;
+}
+ul li .progress p {
+  font-size: 13px;
+}
+
+/* Active Css  */
+
+ul li .active {
+  background-color: var(--green);
+  display: grid;
+  place-items: center;
+}
+.progress.active::after {
+  background-color: #4caf50;
+}
+ul li .active p {
+  display: none;
+}
+ul li .active .uil {
+  font-size: 20px;
+  display: flex;
+}
+/* Couleur pour le dernier élément actif */
+ul li:nth-last-of-type(1) .active {
+  background-color: #4caf50; /* Couleur du dernier élément actif */
+}
+.text {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Responsive Css  */
+
+@media (min-width: 100px) {
+  ul {
+    flex-direction: column;
+  }
+  ul li {
+    flex-direction: row;
+  }
+  ul li .progress {
+    margin: 0 30px;
+  }
+  .progress::after {
+    width: 5px;
+    height: 55px;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(68, 68, 68, 0.781);
+    z-index: -1;
+  }
+  .one::after {
+    height: 0;
+  }
+  ul li .icon {
+    margin: 15px 0;
+  }
+  .head .head_1 {
+    font-size: 24px;
+  }
+  .head .head_2 {
+    font-size: 16px;
+  }
+  table tr td {
+    padding-right: 100px;
+  }
+  input,
+  select,
+  button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .progress::after {
+    background-color: #fff;
+  }
+}
+
+.loading {
+  display: flex;
+  justify-content: center; /* Centre horizontalement */
+  align-items: center; /* Centre verticalement */
+  height: 20vh;
+  animation: spin 2s linear infinite;
+}
+/* Définition de l'animation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); /* Début de l'animation */
+  }
+  100% {
+    transform: rotate(360deg); /* Fin de l'animation */
+  }
+}
+
+/* .info,
+.progression {
+  display: flex;
+
+  justify-content: center;
+  align-items: left;
+} */
+
+.error,
+.commentaire {
+  color: #dc3545;
+  background-color: #f8d7da;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+.progression ul li {
+  padding: 10px;
+}

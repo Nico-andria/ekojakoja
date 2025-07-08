@@ -1,0 +1,28 @@
+.radioButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.radioInput {
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #9d9e9f;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+}
+
+.radioInput:checked {
+  background-color: #21a179;
+  border-color: #21a179;
+  box-shadow: inset 0 0 0 4px #fff;
+}
+
+.radioLabel {
+  color: var(--primary-color);
+  font: 500 16px "Poppins", sans-serif;
+  cursor: pointer;
+  text-align: left;
+}
