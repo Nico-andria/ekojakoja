@@ -127,7 +127,7 @@ const Track = () => {
                     <span className={styles.infoLabel}>Type d'envoi</span>
                     <span className={styles.infoValue}>{item.Envoi}</span>
                   </div>
-                  {item.Commentaires && (
+                  {/* {item.Commentaires && (
                     <div className={styles.infoItem}>
                       <span className={styles.infoLabel}>
                         Infos sur ce colis
@@ -136,18 +136,18 @@ const Track = () => {
                         {item.Commentaires}
                       </span>
                     </div>
-                  )}
-                  {item.Commentaires === "-" ? (
-                    <></>
+                  )} */}
+                  {item.Commentaires !== "" ? (
+                    <div className={styles.infoItem}>
+                      <span className={styles.infoLabel}>
+                        Infos sur ce colis
+                      </span>
+                      <span className={styles.infoValue}>
+                        {item.Commentaires}
+                      </span>
+                    </div>
                   ) : (
-                    <div className={styles.infoItem}>
-                      <span className={styles.infoLabel}>
-                        Infos sur ce colis
-                      </span>
-                      <span className={styles.infoValue}>
-                        {item.Commentaires}
-                      </span>
-                    </div>
+                    <></>
                   )}
 
                   {/* <div className={styles.infoItem}>
